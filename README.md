@@ -65,7 +65,8 @@ Die wichtigsten Befehle im Überblick:
 
 ##  Lizenz
 
-Dieses Plugin ist unter der **CC-BY-NC-4.0** lizenziert. Du darfst es für **nicht-kommerzielle Zwecke** teilen und verändern – unter Nennung des Urhebers. Für **kommerziellen Einsatz** oder Weiterverteilung bitte den Autor kontaktieren.:contentReference[oaicite:0]{index=0}  
+Dieses Plugin ist unter der **CC-BY-NC-4.0** lizenziert. Du darfst es für **nicht-kommerzielle Zwecke** teilen und verändern – unter Nennung des Urhebers. Für **kommerziellen Einsatz** oder Weiterverteilung bitte den Autor kontaktieren.
+Bei anfrage ist dies trotzdem möglich. Discord: NiceRecord
 
 ---
 
@@ -73,12 +74,8 @@ Dieses Plugin ist unter der **CC-BY-NC-4.0** lizenziert. Du darfst es für **nic
 
 - Prüfe die **Serverkonsole** auf Fehlermeldungen.  
 - Stelle sicher, dass die **Berechtigungen korrekt gesetzt** sind.  
-- Achte auf die **aktuellste Version des Plugins**.  
-- Für Hilfe besuche den [Discord-Supportserver] oder kontaktiere die **HexaPlugins-Community**.:contentReference[oaicite:1]{index=1}  
+- Achte auf die **aktuellste Version des Plugins**.
+- Für Support schreibe NiceRecord auf Discord an.
 
 ---
-
-##  Lizenz & Copyright
-
 Made with ❤️ for Minecraft servers by **HexaPlugins**.  
-Modrinth ist quelloffen und wird von **Rinth, Inc.** gehostet (© 2025).:contentReference[oaicite:2]{index=2}  
