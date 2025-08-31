@@ -1,0 +1,228 @@
+# CitybuildSystem Messages
+general:
+  no-permission: "&cYou don't have permission for this command!"
+  only-players: "&cThis command can only be executed by players!"
+  loading: "&7Loading..."
+  error: "&cAn error occurred!"
+  player-not-found: "&cPlayer &e%player% &cnot found!"
+  player-offline: "&cPlayer &e%player% &cis offline!"
+
+home:
+  teleporting: "&7Teleporting to home &e%home%&7..."
+  teleported: "&aYou have been teleported to home &e%home%&a!"
+  teleport-cancelled: "&cTeleportation cancelled!"
+  not-found: "&cThe home &e%home% &cdoes not exist!"
+  already-exists: "&cYou already have a home named &e%home%&c!"
+  set-success: "&aHome &e%home% &asuccessfully set!"
+  delete-success: "&aHome &e%home% &asuccessfully deleted!"
+  max-homes-reached: "&cYou have reached the maximum number of homes!"
+  invalid-name: "&cInvalid home name! Use only letters and numbers."
+  enter-name: "&7Enter the name for your home in chat:"
+  enter-name-cancel: "&7Write &ccancel &7to abort."
+  purchase-success: "&aSuccessfully purchased a new home slot for &e%price%$&a!"
+  purchase-failed: "&cError purchasing home slot!"
+  insufficient-funds: "&cYou don't have enough money! Required: &e%price%$"
+  max-homes-purchased: "&cYou have already purchased the maximum number of home slots!"
+
+admin:
+  gamemode-changed-self: "&aGamemode changed to &e%gamemode%&a!"
+  gamemode-changed-other: "&aGamemode of &e%player% &achanged to &e%gamemode%&a!"
+  gamemode-changed-by: "&aYour gamemode was changed to &e%gamemode%&a!"
+  fly-enabled-self: "&aFly mode enabled!"
+  fly-disabled-self: "&cFly mode disabled!"
+  fly-enabled-other: "&aFly mode enabled for &e%player%&a!"
+  fly-disabled-other: "&cFly mode disabled for &e%player%&c!"
+  fly-enabled-by: "&aYour fly mode was enabled!"
+  fly-disabled-by: "&cYour fly mode was disabled!"
+  healed-self: "&aYou have been healed!"
+  healed-other: "&e%player% &ahas been healed!"
+  healed-by: "&aYou have been healed by &e%player%&a!"
+  fed-self: "&aYou have been fed!"
+  fed-other: "&e%player% &ahas been fed!"
+  fed-by: "&aYou have been fed by &e%player%&a!"
+  speed-changed-self: "&aSpeed set to &e%speed%&a!"
+  speed-changed-other: "&aSpeed of &e%player% &aset to &e%speed%&a!"
+  speed-changed-by: "&aYour speed was set to &e%speed%&a!"
+  invalid-speed: "&cInvalid speed! Use a value between %min% and %max%!"
+  cleared-self: "&aInventory cleared!"
+  cleared-other: "&aInventory of &e%player% &acleared!"
+  cleared-by: "&aYour inventory was cleared!"
+  vanish-enabled-self: "&aVanish enabled!"
+  vanish-disabled-self: "&cVanish disabled!"
+  vanish-enabled-other: "&aVanish enabled for &e%player%&a!"
+  vanish-disabled-other: "&cVanish disabled for &e%player%&c!"
+  give-success: "&aGiven %amount%x &e%item% &ato &e%player%&a!"
+  give-received: "&aYou received %amount%x &e%item%&a!"
+  invalid-item: "&cInvalid item: &e%item%"
+  invalid-amount: "&cInvalid amount! Maximum: &e%max%"
+
+utility:
+  trash-opened: "&aTrash interface opened!"
+  head-given-self: "&aYou received your head!"
+  head-given-other: "&aYou received &e%player%&a's head!"
+  ec-opened-self: "&aEnderchest opened!"
+  ec-opened-other: "&aEnderchest of &e%player% &aopened!"
+  invsee-opened: "&aInventory of &e%player% &aopened!"
+  sign-success: "&aItem successfully signed!"
+  sign-no-item: "&cHold an item in your hand!"
+  meta-opened: "&aMeta editor opened!"
+  meta-no-item: "&cHold an item in your hand!"
+
+teleport:
+  spawn-teleporting: "&7Teleporting to spawn..."
+  spawn-teleported: "&aYou have been teleported to spawn!"
+  spawn-set: "&aSpawn successfully set!"
+  warp-teleporting: "&7Teleporting to warp &e%warp%&7..."
+  warp-teleported: "&aYou have been teleported to warp &e%warp%&a!"
+  warp-not-found: "&cWarp &e%warp% &cdoes not exist!"
+  warp-created: "&aWarp &e%warp% &asuccessfully created!"
+  warp-deleted: "&aWarp &e%warp% &asuccessfully deleted!"
+  warp-already-exists: "&cWarp &e%warp% &calready exists!"
+  tpo-teleported: "&aYou have been teleported to &e%player%&a!"
+  tphere-teleported: "&e%player% &ahas been teleported to you!"
+  tphere-teleported-by: "&aYou have been teleported to &e%player%&a!"
+  tpa-sent: "&aTeleport request sent to &e%player%&a!"
+  tpa-received: "&e%player% &awants to teleport to you! &7(/tpaccept or /tpdeny)"
+  tpahere-sent: "&aTeleport request sent to &e%player%&a!"
+  tpahere-received: "&e%player% &awants you to teleport to them! &7(/tpaccept or /tpdeny)"
+  tpa-accepted: "&aTeleport request accepted!"
+  tpa-accepted-by: "&e%player% &aaccepted your request!"
+  tpa-denied: "&cTeleport request denied!"
+  tpa-denied-by: "&e%player% &cdenied your request!"
+  tpa-no-request: "&cNo pending teleport request!"
+  tpa-timeout: "&cTeleport request has expired!"
+  tpa-enabled: "&aTeleport requests enabled!"
+  tpa-disabled: "&cTeleport requests disabled!"
+  tpa-player-disabled: "&cThis player has disabled teleport requests!"
+
+server:
+  broadcast: "&4[&cBROADCAST&4]&r %message%"
+  chat-cleared: "&aChat has been cleared!"
+  slowchat-enabled: "&aSlowchat enabled! Delay: &e%delay% &aseconds"
+  slowchat-disabled: "&cSlowchat disabled!"
+  slowchat-wait: "&cPlease wait &e%time% &cmore seconds before chatting again!"
+  maintenance-enabled: "&cMaintenance mode enabled!"
+  maintenance-disabled: "&aMaintenance mode disabled!"
+  maintenance-kick: "&cServer is in maintenance mode!"
+  reload-success: "&aCBSystem successfully reloaded!"
+  restart-countdown: "&cServer restarting in &e%time% &cseconds!"
+  restart-cancelled: "&aServer restart cancelled!"
+  maintenance-add-success: "&aPlayer &e%player% &aadded to maintenance whitelist!"
+  maintenance-add-failed: "&cError adding &e%player% &cto maintenance whitelist!"
+  maintenance-remove-success: "&aPlayer &e%player% &aremoved from maintenance whitelist!"
+  maintenance-remove-failed: "&cPlayer &e%player% &cis not on the maintenance whitelist!"
+  maintenance-list-header: "&aMaintenance whitelist:"
+  maintenance-list-empty: "&cThe maintenance whitelist is empty!"
+
+social:
+  discord: "&9Discord: &f%url%"
+  youtube: "&cYouTube: &f%url%"
+  teamchat-enabled: "&aTeamchat enabled!"
+  teamchat-disabled: "&cTeamchat disabled!"
+  teamchat-format: "&8[&6TEAM&8] &e%player%&8: &f%message%"
+  message-sent: "&7[&aYou &8-> &e%player%&7] &f%message%"
+  message-received: "&7[&e%player% &8-> &aYou&7] &f%message%"
+  message-self: "&cYou cannot message yourself!"
+  no-reply-target: "&cNo one to reply to found!"
+
+info:
+  playtime-self: "&aYour playtime: &e%time%"
+  playtime-other: "&aPlaytime of &e%player%&a: &e%time%"
+
+entity:
+  spawned: "&aSpawned %amount%x &e%entity%&a!"
+  invalid-entity: "&cInvalid entity: &e%entity%"
+  spawn-failed: "&cError spawning &e%entity%"
+
+sudo:
+  executed: "&aCommand &e%command% &aexecuted as &e%player%&a!"
+  message-sent: "&aMessage '&f%message%&a' sent as &e%player%&a!"
+  failed: "&cError executing command!"
+
+update:
+  checking: "&7Checking for updates..."
+  available: "&6&lUpdate available! &7Current version: &e%current_version% &8| &7Latest version: &a%latest_version%\n&7Download: &b%download_url%"
+  uptodate: "&aYou are already using the latest version! &8(&7%version%&8)"
+  error: "&cError while checking for updates: &e%error%"
+
+commands:
+  homes:
+    description: "Opens the home menu"
+  home:
+    description: "Teleports to a home"
+    usage: "/home <name>"
+  sethome:
+    description: "Sets a home at the current position"
+    usage: "/sethome <name>"
+  delhome:
+    description: "Deletes a set home"
+    usage: "/delhome <name>"
+  gamemode:
+    usage: "/gamemode <0|1|2|3> [player]"
+  fly:
+    usage: "/fly [player]"
+  heal:
+    usage: "/heal [player]"
+  feed:
+    usage: "/feed [player]"
+  speed:
+    usage: "/speed <value> [player]"
+  give:
+    usage: "/give <item> [amount] [player]"
+  clear:
+    usage: "/clear [player]"
+  vanish:
+    usage: "/vanish [player]"
+  head:
+    usage: "/head [player]"
+  ec:
+    usage: "/ec [player]"
+  invsee:
+    usage: "/invsee <player>"
+  sign:
+    usage: "/sign <text>"
+  spawn:
+    usage: "/spawn"
+  warp:
+    usage: "/warp <name>"
+  setwarp:
+    usage: "/setwarp <name>"
+  delwarp:
+    usage: "/delwarp <name>"
+  tpo:
+    usage: "/tpo <player>"
+  tphere:
+    usage: "/tphere <player>"
+  tpa:
+    usage: "/tpa <player>"
+  tpahere:
+    usage: "/tpahere <player>"
+  broadcast:
+    usage: "/broadcast <message>"
+  message:
+    usage: "/message <player> <message>"
+  respond:
+    usage: "/respond <message>"
+  playtime:
+    usage: "/playtime [player]"
+  spawnentity:
+    usage: "/spawnentity <entity> [amount]"
+  sudo:
+    usage: "/sudo <player> <command|message>"
+  bank:
+    usage: "/bank [balance|deposit|withdraw] [amount]"
+    deposit-usage: "/bank deposit <amount>"
+    withdraw-usage: "/bank withdraw <amount>"
+
+bank:
+  balance: "&aYour balances: &7Bank: &e%bank_balance%$ &7| Wallet: &e%vault_balance%$"
+  deposit-success: "&aYou successfully deposited &e%amount%$ &ainto the bank!"
+  deposit-failed: "&cError depositing!"
+  deposit-limit: "&cYou can deposit a maximum of 100K at once!"
+  withdraw-success: "&aYou successfully withdrew &e%amount%$ &afrom the bank!"
+  withdraw-failed: "&cError withdrawing!"
+  withdraw-limit: "&cYou can withdraw a maximum of 1M at once!"
+  insufficient-funds: "&cYou don't have enough money in your wallet!"
+  insufficient-bank-funds: "&cYou don't have enough money in the bank!"
+  invalid-amount: "&cInvalid amount!"
+  economy-not-available: "&cEconomy system is not available!"

@@ -1,0 +1,86 @@
+# CitybuildSystem Configuration
+
+# Language Settings
+language:
+  # Available languages: en, de
+  # Default language for the server
+  default: en
+
+# Database Settings
+database:
+  file: "homes.db"
+  playtime-file: "playtime.db"
+  warps-file: "warps.db"
+
+# Home Settings
+homes:
+  # Maximum homes a player can have with full permissions
+  max-homes: 56
+  # Default number of homes for new players
+  default-homes: 3
+  # Price per additional home
+  home-price: 1000.0
+  # Economy enabled (requires Vault)
+  economy-enabled: true
+
+# Messages Settings
+messages:
+  # Prefix that appears before every chat message (not GUI items)
+  prefix: "&6&lCBSYSTEM &8» &7"
+
+# Teleport Settings
+teleport:
+  # Teleport delay in seconds (0 to disable)
+  delay: 3
+  # Cancel teleport on move
+  cancel-on-move: true
+  # TPA request timeout in seconds
+  tpa-timeout: 30
+
+# Server Settings
+server:
+  # Spawn location (will be set automatically)
+  spawn:
+    world: "world"
+    x: 0.0
+    y: 64.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+  # Maintenance mode settings
+  maintenance:
+    enabled: false
+    whitelist: []
+  # Slow chat settings
+  slowchat:
+    enabled: false
+    delay: 5
+
+# Social Links
+social:
+  discord:
+    enabled: true
+    url: "https://discord.gg/yourserver"
+    message: "&9Discord: &f{url}"
+  youtube:
+    enabled: true
+    url: "https://youtube.com/yourchannel"
+    message: "&cYouTube: &f{url}"
+
+# Command Settings
+commands:
+  # Speed command settings
+  speed:
+    min-speed: 0.0
+    max-speed: 10.0
+  # Feed/Heal settings
+  feed:
+    cooldown: 0
+  heal:
+    cooldown: 0
+  # Broadcast settings
+  broadcast:
+    prefix: "&6&lBRAODCAST &8» &7"
+  # Give command settings
+  give:
+    max-amount: 64

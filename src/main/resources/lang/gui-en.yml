@@ -1,0 +1,263 @@
+# CitybuildSystem GUI Configuration
+
+# Home GUI Settings
+home-gui:
+  title: "&6&lCBSYSTEM &8» Your Homes"
+  size: 54
+
+  # Item Materials and Settings
+  items:
+    # Border items (glass panes around the GUI)
+    border:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: "&7"
+      lore: []
+
+    # Close button (bottom right)
+    close:
+      material: "SPRUCE_DOOR"
+      name: "&c&lCLOSE"
+      lore:
+        - "&7Click to close"
+
+    # Info item (middle bottom)
+    info:
+      material: "PAPER"
+      name: "&e&lINFO"
+      lore:
+        - "&7"
+        - "&7You can buy additional &eHomes&7."
+        - "&7"
+        - "&7Homes: &e%used%&8/&e%max%"
+        - "&7Maximum buyable: &e28"
+
+    # Existing home items
+    home-set:
+      material: "WHITE_BED"
+      name: "&e&lHOME %name%"
+      lore:
+        - "&7"
+        - "&7Left click to teleport"
+        - "&7Right click to delete"
+
+    # Empty home slots (can be set)
+    home-empty:
+      material: "RED_BED"
+      name: "&e&lSET HOME"
+      lore:
+        - "&7Click to set a home"
+
+    # Locked home slots (need to be purchased)
+    home-locked:
+      material: "GRAY_BED"
+      name: "&e&lBUY HOME"
+      lore:
+        - "&7"
+        - "&7Price: &e%price%$"
+        - "&7Click to buy"
+
+    # Navigation items
+    previous-page:
+      material: "ARROW"
+      name: "&c&lPREVIOUS PAGE"
+      lore:
+        - "&7Click to go to the"
+        - "&7previous page"
+
+    next-page:
+      material: "ARROW"
+      name: "&a&lNEXT PAGE"
+      lore:
+        - "&7Click to go to the"
+        - "&7next page"
+
+    # Page info item
+    page-info:
+      material: "BOOK"
+      name: "&e&lPAGE %current%/%total%"
+      lore:
+        - "&7You are on page"
+        - "&7&e%current% &7of &e%total%"
+
+# Bank GUI Settings
+bank-gui:
+  # Main Bank GUI
+  main:
+    title: "&6&lCBSYSTEM &8» Your Bank"
+    size: 45
+    items:
+      # Border items (glass panes around the GUI)
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head (shows account info)
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lYOUR ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Balance: &e%bank_balance%"
+          - "&7Wallet Balance: &e%vault_balance%"
+
+      # Deposit button
+      deposit:
+        material: "LIME_DYE"
+        name: "&e&lDEPOSIT MONEY"
+        lore:
+          - "&7Click to deposit money"
+
+      # Withdraw button
+      withdraw:
+        material: "RED_DYE"
+        name: "&e&lWITHDRAW MONEY"
+        lore:
+          - "&7Click to withdraw money"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7The maximum deposit amount is 100K"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lCLOSE"
+        lore:
+          - "&7Click to close"
+
+  # Deposit GUI
+  deposit:
+    title: "&6&lCBSYSTEM &8» Deposit Money"
+    size: 36
+    items:
+      # Border items
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lYOUR ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Balance: &e%bank_balance%"
+          - "&7Wallet Balance: &e%vault_balance%"
+
+      # Deposit amounts - Golden Nuggets
+      nugget:
+        material: "GOLD_NUGGET"
+        amounts: [10, 25, 50, 100, 250]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to deposit %amount%"
+
+      # Deposit amounts - Gold Ingots
+      ingot:
+        material: "GOLD_INGOT"
+        amounts: [500, 1000, 2500, 5000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to deposit %amount%"
+
+      # Deposit amounts - Gold Blocks
+      block:
+        material: "GOLD_BLOCK"
+        amounts: [10000, 25000, 50000, 100000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to deposit %amount%"
+
+      # Back button
+      back:
+        material: "ARROW"
+        name: "&c&lBACK"
+        lore:
+          - "&7Click to go back"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7The maximum deposit amount is 100K"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lCLOSE"
+        lore:
+          - "&7Click to close"
+
+  # Withdraw GUI
+  withdraw:
+    title: "&6&lCBSYSTEM &8» Withdraw Money"
+    size: 36
+    items:
+      # Border items
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lYOUR ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Balance: &e%bank_balance%"
+          - "&7Wallet Balance: &e%vault_balance%"
+
+      # Withdraw amounts - Golden Nuggets
+      nugget:
+        material: "GOLD_NUGGET"
+        amounts: [10, 25, 50, 100, 250]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to withdraw %amount%"
+
+      # Withdraw amounts - Gold Ingots
+      ingot:
+        material: "GOLD_INGOT"
+        amounts: [500, 1000, 2500, 5000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to withdraw %amount%"
+
+      # Withdraw amounts - Gold Blocks
+      block:
+        material: "GOLD_BLOCK"
+        amounts: [10000, 25000, 50000, 100000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Click to withdraw %amount%"
+
+      # Back button
+      back:
+        material: "ARROW"
+        name: "&c&lBACK"
+        lore:
+          - "&7Click to go back"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7The maximum withdrawal amount is 1M"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lCLOSE"
+        lore:
+          - "&7Click to close"

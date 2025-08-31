@@ -1,0 +1,263 @@
+# CitybuildSystem GUI Configuration
+
+# Home GUI Settings
+home-gui:
+  title: "&6&lCBSYSTEM &8» Deine Homes"
+  size: 54
+
+  # Item Materials and Settings
+  items:
+    # Border items (glass panes around the GUI)
+    border:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: "&7"
+      lore: []
+
+    # Close button (bottom right)
+    close:
+      material: "SPRUCE_DOOR"
+      name: "&c&lSCHLIEßEN"
+      lore:
+        - "&7Klicke zum Schließen"
+
+    # Info item (middle bottom)
+    info:
+      material: "PAPER"
+      name: "&e&lINFO"
+      lore:
+        - "&7"
+        - "&7Sie können weitere &eHomes &7kaufen."
+        - "&7"
+        - "&7Homes: &e%used%&8/&e%max%"
+        - "&7Maximal kaufbar: &e28"
+
+    # Existing home items
+    home-set:
+      material: "WHITE_BED"
+      name: "&e&lHOME %name%"
+      lore:
+        - "&7"
+        - "&7Linksklick zum Teleportieren"
+        - "&7Rechtsklick zum Löschen"
+
+    # Empty home slots (can be set)
+    home-empty:
+      material: "RED_BED"
+      name: "&e&lHOME SETZEN"
+      lore:
+        - "&7Klicke um ein Home zu setzen"
+
+    # Locked home slots (need to be purchased)
+    home-locked:
+      material: "GRAY_BED"
+      name: "&e&lHOME KAUFEN"
+      lore:
+        - "&7"
+        - "&7Preis: &e%price%$"
+        - "&7Klicke zum kaufen"
+
+    # Navigation items
+    previous-page:
+      material: "ARROW"
+      name: "&c&lVORHERIGE SEITE"
+      lore:
+        - "&7Klicke um zur vorherigen"
+        - "&7Seite zu gelangen"
+
+    next-page:
+      material: "ARROW"
+      name: "&a&lNÄCHSTE SEITE"
+      lore:
+        - "&7Klicke um zur nächsten"
+        - "&7Seite zu gelangen"
+
+    # Page info item
+    page-info:
+      material: "BOOK"
+      name: "&e&lSEITE %current%/%total%"
+      lore:
+        - "&7Du befindest dich auf"
+        - "&7Seite &e%current% &7von &e%total%"
+
+# Bank GUI Settings
+bank-gui:
+  # Main Bank GUI
+  main:
+    title: "&6&lCBSYSTEM &8» Deine Bank"
+    size: 45
+    items:
+      # Border items (glass panes around the GUI)
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head (shows account info)
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lDEIN ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Guthaben: &e%bank_balance%"
+          - "&7Guthaben: &e%vault_balance%"
+
+      # Deposit button
+      deposit:
+        material: "LIME_DYE"
+        name: "&e&lGELD EINZAHLEN"
+        lore:
+          - "&7Klicke um Geld einzuzahlen"
+
+      # Withdraw button
+      withdraw:
+        material: "RED_DYE"
+        name: "&e&lGELD AUSZAHLEN"
+        lore:
+          - "&7Klicke um Geld auszuzahlen"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7Das maximum zum einzahlen ist 100K"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lSCHLIEßEN"
+        lore:
+          - "&7Klicke zum Schließen"
+
+  # Deposit GUI
+  deposit:
+    title: "&6&lCBSYSTEM &8» Geld einzahlen"
+    size: 36
+    items:
+      # Border items
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lDEIN ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Guthaben: &e%bank_balance%"
+          - "&7Guthaben: &e%vault_balance%"
+
+      # Deposit amounts - Golden Nuggets
+      nugget:
+        material: "GOLD_NUGGET"
+        amounts: [10, 25, 50, 100, 250]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% einzuzahlen"
+
+      # Deposit amounts - Gold Ingots
+      ingot:
+        material: "GOLD_INGOT"
+        amounts: [500, 1000, 2500, 5000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% einzuzahlen"
+
+      # Deposit amounts - Gold Blocks
+      block:
+        material: "GOLD_BLOCK"
+        amounts: [10000, 25000, 50000, 100000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% einzuzahlen"
+
+      # Back button
+      back:
+        material: "ARROW"
+        name: "&c&lZURÜCK"
+        lore:
+          - "&7Klicke um zurück zu kommen"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7Das maximum zum einzahlen ist 100K"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lSCHLIEßEN"
+        lore:
+          - "&7Klicke zum Schließen"
+
+  # Withdraw GUI
+  withdraw:
+    title: "&6&lCBSYSTEM &8» Geld auszahlen"
+    size: 36
+    items:
+      # Border items
+      border:
+        material: "BLACK_STAINED_GLASS_PANE"
+        name: "&7"
+        lore: []
+
+      # Player head
+      player-head:
+        material: "PLAYER_HEAD"
+        name: "&e&lDEIN ACCOUNT"
+        lore:
+          - "&7"
+          - "&7Bank Guthaben: &e%bank_balance%"
+          - "&7Guthaben: &e%vault_balance%"
+
+      # Withdraw amounts - Golden Nuggets
+      nugget:
+        material: "GOLD_NUGGET"
+        amounts: [10, 25, 50, 100, 250]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% auszuzahlen"
+
+      # Withdraw amounts - Gold Ingots
+      ingot:
+        material: "GOLD_INGOT"
+        amounts: [500, 1000, 2500, 5000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% auszuzahlen"
+
+      # Withdraw amounts - Gold Blocks
+      block:
+        material: "GOLD_BLOCK"
+        amounts: [10000, 25000, 50000, 100000]
+        name: "&e&l%amount%"
+        lore:
+          - "&7Klicke um %amount% auszuzahlen"
+
+      # Back button
+      back:
+        material: "ARROW"
+        name: "&c&lZURÜCK"
+        lore:
+          - "&7Klicke um zurück zu kommen"
+
+      # Info item
+      info:
+        material: "PAPER"
+        name: "&e&lINFO"
+        lore:
+          - "&7"
+          - "&7Das maximum zum auszahlen ist 1M"
+
+      # Close button
+      close:
+        material: "SPRUCE_DOOR"
+        name: "&c&lSCHLIEßEN"
+        lore:
+          - "&7Klicke zum Schließen"

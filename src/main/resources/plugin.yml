@@ -1,0 +1,508 @@
+name: HexaCitybuildSystem
+version: '${project.version}'
+main: de.nicerecord.citybuildsystem.CitybuildSystem
+api-version: '1.21'
+softdepend: [PlaceholderAPI, Vault]
+authors: [NiceRecord]
+website: https://modrinth.com/user/nicerecord
+
+commands:
+  # Home Commands
+  homes:
+    description: Öffnet das Home-Menü
+    usage: /homes
+    permission: cbsystem.home.use
+  home:
+    description: Teleportiert zu einem Home
+    usage: /home <name>
+    permission: cbsystem.home.teleport
+  sethome:
+    description: Setzt ein Home an der aktuellen Position
+    usage: /sethome <name>
+    permission: cbsystem.home.set.1
+  delhome:
+    description: Löscht ein gesetztes Home
+    usage: /delhome <name>
+    permission: cbsystem.home.delete
+
+  # Admin Commands
+  gamemode:
+    description: Ändert den Spielmodus
+    usage: /gamemode <mode> [player]
+    aliases: [gm]
+    permission: cbsystem.gamemode
+  fly:
+    description: Schaltet den Flugmodus um
+    usage: /fly [player]
+    permission: cbsystem.fly
+  heal:
+    description: Heilt einen Spieler
+    usage: /heal [player]
+    permission: cbsystem.heal
+  feed:
+    description: Sättigt einen Spieler
+    usage: /feed [player]
+    permission: cbsystem.feed
+  speed:
+    description: Ändert die Geschwindigkeit
+    usage: /speed <value> [player]
+    permission: cbsystem.speed
+  give:
+    description: Gibt Items
+    usage: /give <item> [amount] [player]
+    permission: cbsystem.give
+  clear:
+    description: Leert das Inventar
+    usage: /clear [player]
+    permission: cbsystem.clear
+  vanish:
+    description: Macht unsichtbar
+    usage: /vanish [player]
+    permission: cbsystem.vanish
+  sudo:
+    description: Führt einen Command als anderer Spieler aus
+    usage: /sudo <player> <command/message>
+    permission: cbsystem.sudo
+
+  # Utility Commands
+  trash:
+    description: Öffnet das Müll-Interface
+    usage: /trash
+    permission: cbsystem.trash
+  head:
+    description: Gibt einen Spielerkopf
+    usage: /head [player]
+    permission: cbsystem.head
+  enderchest:
+    description: Öffnet die Enderchest
+    usage: /enderchest [player]
+    aliases: [ec]
+    permission: cbsystem.ec
+  invsee:
+    description: Zeigt das Inventar eines Spielers
+    usage: /invsee <player>
+    permission: cbsystem.invsee
+  sign:
+    description: Signiert ein Item
+    usage: /sign <text>
+    permission: cbsystem.sign
+
+  # Teleport Commands
+  spawn:
+    description: Teleportiert zum Spawn
+    usage: /spawn
+    permission: cbsystem.spawn
+  setspawn:
+    description: Setzt den Spawn-Punkt
+    usage: /setspawn
+    permission: cbsystem.setspawn
+  warp:
+    description: Teleportiert zu einem Warp
+    usage: /warp <name>
+    permission: cbsystem.warp
+  setwarp:
+    description: Erstellt einen Warp
+    usage: /setwarp <name>
+    permission: cbsystem.setwarp
+  delwarp:
+    description: Löscht einen Warp
+    usage: /delwarp <name>
+    permission: cbsystem.delwarp
+  tpo:
+    description: Teleportiert zu einem Spieler
+    usage: /tpo <player>
+    permission: cbsystem.tpo
+  tphere:
+    description: Teleportiert einen Spieler zu dir
+    usage: /tphere <player>
+    permission: cbsystem.tphere
+  tpa:
+    description: Sendet eine Teleport-Anfrage
+    usage: /tpa <player>
+    permission: cbsystem.tpa
+  tpahere:
+    description: Bittet einen Spieler zu dir zu teleportieren
+    usage: /tpahere <player>
+    permission: cbsystem.tpahere
+  tpaccept:
+    description: Akzeptiert eine Teleport-Anfrage
+    usage: /tpaccept
+    permission: cbsystem.tpaccept
+  tpdeny:
+    description: Lehnt eine Teleport-Anfrage ab
+    usage: /tpdeny
+    permission: cbsystem.tpdeny
+  tpatoggle:
+    description: Schaltet Teleport-Anfragen um
+    usage: /tpatoggle
+    permission: cbsystem.tpatoggle
+
+  # Server Commands
+  broadcast:
+    description: Sendet eine Server-Nachricht
+    usage: /broadcast <message>
+    permission: cbsystem.broadcast
+  clearchat:
+    description: Löscht den Chat für alle Spieler
+    usage: /clearchat
+    aliases: [cc]
+    permission: cbsystem.clearchat
+  slowchat:
+    description: Schaltet den Slow-Chat um
+    usage: /slowchat
+    permission: cbsystem.slowchat
+  maintenance:
+    description: Schaltet den Wartungsmodus um
+    usage: /maintenance
+    permission: cbsystem.maintenance
+  cbupdate:
+    description: Überprüft auf Plugin-Updates
+    usage: /cbupdate
+    permission: cbsystem.admin
+  cbreload:
+    description: Lädt das Plugin neu
+    usage: /reload
+    permission: cbsystem.reload
+  restart:
+    description: Startet den Server neu
+    usage: /restart
+    permission: cbsystem.restart
+
+  # Social Commands
+  discord:
+    description: Zeigt den Discord-Link
+    usage: /discord
+    permission: cbsystem.discord
+  youtube:
+    description: Zeigt den YouTube-Link
+    usage: /youtube
+    permission: cbsystem.youtube
+  teamchat:
+    description: Aktiviert den Team-Chat
+    usage: /teamchat
+    permission: cbsystem.teamchat
+  message:
+    description: Sendet eine private Nachricht
+    usage: /message <player> <message>
+    aliases: [msg, tell, whisper]
+    permission: cbsystem.message
+  respond:
+    description: Antwortet auf die letzte private Nachricht
+    usage: /respond <message>
+    aliases: [r, reply]
+    permission: cbsystem.respond
+
+  # Info Commands
+  playtime:
+    description: Zeigt die Spielzeit
+    usage: /playtime [player]
+    permission: cbsystem.playtime
+
+  # Entity Commands
+  spawnentity:
+    description: Spawnt Entities
+    usage: /spawnentity <entity> [amount]
+    permission: cbsystem.spawnentity
+
+  # Bank Commands
+  bank:
+    description: Öffnet das Bank-System
+    usage: /bank [balance|deposit|withdraw] [amount]
+    permission: cbsystem.bank
+
+permissions:
+  # Home Permissions
+  cbsystem.home.use:
+    description: Erlaubt die Nutzung des /homes Commands
+    default: true
+  cbsystem.home.teleport:
+    description: Erlaubt die Nutzung des /home Commands
+    default: true
+  cbsystem.home.delete:
+    description: Erlaubt die Nutzung des /delhome Commands
+    default: true
+  cbsystem.home.set.*:
+    description: Erlaubt das Setzen von unbegrenzt vielen Homes
+    default: op
+    children:
+      cbsystem.home.set.1: true
+      cbsystem.home.set.2: true
+      cbsystem.home.set.3: true
+      cbsystem.home.set.4: true
+      cbsystem.home.set.5: true
+      cbsystem.home.set.6: true
+      cbsystem.home.set.7: true
+      cbsystem.home.set.8: true
+      cbsystem.home.set.9: true
+      cbsystem.home.set.10: true
+      cbsystem.home.set.11: true
+      cbsystem.home.set.12: true
+      cbsystem.home.set.13: true
+      cbsystem.home.set.14: true
+      cbsystem.home.set.15: true
+      cbsystem.home.set.16: true
+      cbsystem.home.set.17: true
+      cbsystem.home.set.18: true
+      cbsystem.home.set.19: true
+      cbsystem.home.set.20: true
+      cbsystem.home.set.21: true
+      cbsystem.home.set.22: true
+      cbsystem.home.set.23: true
+      cbsystem.home.set.24: true
+      cbsystem.home.set.25: true
+      cbsystem.home.set.26: true
+      cbsystem.home.set.27: true
+      cbsystem.home.set.28: true
+  cbsystem.home.set.1:
+    description: Erlaubt das Setzen von 1 Home
+    default: true
+  cbsystem.home.set.2:
+    description: Erlaubt das Setzen von 2 Homes
+    default: false
+  cbsystem.home.set.3:
+    description: Erlaubt das Setzen von 3 Homes
+    default: false
+  cbsystem.home.set.4:
+    description: Erlaubt das Setzen von 4 Homes
+    default: false
+  cbsystem.home.set.5:
+    description: Erlaubt das Setzen von 5 Homes
+    default: false
+  cbsystem.home.set.6:
+    description: Erlaubt das Setzen von 6 Homes
+    default: false
+  cbsystem.home.set.7:
+    description: Erlaubt das Setzen von 7 Homes
+    default: false
+  cbsystem.home.set.8:
+    description: Erlaubt das Setzen von 8 Homes
+    default: false
+  cbsystem.home.set.9:
+    description: Erlaubt das Setzen von 9 Homes
+    default: false
+  cbsystem.home.set.10:
+    description: Erlaubt das Setzen von 10 Homes
+    default: false
+  cbsystem.home.set.11:
+    description: Erlaubt das Setzen von 11 Homes
+    default: false
+  cbsystem.home.set.12:
+    description: Erlaubt das Setzen von 12 Homes
+    default: false
+  cbsystem.home.set.13:
+    description: Erlaubt das Setzen von 13 Homes
+    default: false
+  cbsystem.home.set.14:
+    description: Erlaubt das Setzen von 14 Homes
+    default: false
+  cbsystem.home.set.15:
+    description: Erlaubt das Setzen von 15 Homes
+    default: false
+  cbsystem.home.set.16:
+    description: Erlaubt das Setzen von 16 Homes
+    default: false
+  cbsystem.home.set.17:
+    description: Erlaubt das Setzen von 17 Homes
+    default: false
+  cbsystem.home.set.18:
+    description: Erlaubt das Setzen von 18 Homes
+    default: false
+  cbsystem.home.set.19:
+    description: Erlaubt das Setzen von 19 Homes
+    default: false
+  cbsystem.home.set.20:
+    description: Erlaubt das Setzen von 20 Homes
+    default: false
+  cbsystem.home.set.21:
+    description: Erlaubt das Setzen von 21 Homes
+    default: false
+  cbsystem.home.set.22:
+    description: Erlaubt das Setzen von 22 Homes
+    default: false
+  cbsystem.home.set.23:
+    description: Erlaubt das Setzen von 23 Homes
+    default: false
+  cbsystem.home.set.24:
+    description: Erlaubt das Setzen von 24 Homes
+    default: false
+  cbsystem.home.set.25:
+    description: Erlaubt das Setzen von 25 Homes
+    default: false
+  cbsystem.home.set.26:
+    description: Erlaubt das Setzen von 26 Homes
+    default: false
+  cbsystem.home.set.27:
+    description: Erlaubt das Setzen von 27 Homes
+    default: false
+  cbsystem.home.set.28:
+    description: Erlaubt das Setzen von 28 Homes
+    default: false
+
+  # Admin Permissions
+  cbsystem.gamemode:
+    description: Erlaubt das Ändern des eigenen Spielmodus
+    default: op
+  cbsystem.gamemode.other:
+    description: Erlaubt das Ändern des Spielmodus anderer Spieler
+    default: op
+  cbsystem.fly:
+    description: Erlaubt das eigene Fliegen
+    default: op
+  cbsystem.fly.other:
+    description: Erlaubt das Fliegen für andere Spieler zu aktivieren
+    default: op
+  cbsystem.heal:
+    description: Erlaubt das eigene Heilen
+    default: op
+  cbsystem.heal.other:
+    description: Erlaubt das Heilen anderer Spieler
+    default: op
+  cbsystem.feed:
+    description: Erlaubt das eigene Sättigen
+    default: op
+  cbsystem.feed.other:
+    description: Erlaubt das Sättigen anderer Spieler
+    default: op
+  cbsystem.speed:
+    description: Erlaubt das Ändern der eigenen Geschwindigkeit
+    default: op
+  cbsystem.speed.other:
+    description: Erlaubt das Ändern der Geschwindigkeit anderer Spieler
+    default: op
+  cbsystem.give:
+    description: Erlaubt das Geben von Items
+    default: op
+  cbsystem.clear:
+    description: Erlaubt das Leeren des eigenen Inventars
+    default: op
+  cbsystem.clear.other:
+    description: Erlaubt das Leeren des Inventars anderer Spieler
+    default: op
+  cbsystem.vanish:
+    description: Erlaubt das eigene Unsichtbar werden
+    default: op
+  cbsystem.vanish.other:
+    description: Erlaubt das Unsichtbar machen anderer Spieler
+    default: op
+  cbsystem.sudo:
+    description: Erlaubt das Ausführen von Commands als andere Spieler
+    default: op
+
+  # Utility Permissions
+  cbsystem.trash:
+    description: Erlaubt die Nutzung des Müll-Interfaces
+    default: true
+  cbsystem.head:
+    description: Erlaubt das Geben des eigenen Kopfes
+    default: true
+  cbsystem.head.other:
+    description: Erlaubt das Geben von Köpfen anderer Spieler
+    default: op
+  cbsystem.ec:
+    description: Erlaubt das Öffnen der eigenen Enderchest
+    default: true
+  cbsystem.ec.other:
+    description: Erlaubt das Öffnen der Enderchest anderer Spieler
+    default: op
+  cbsystem.invsee:
+    description: Erlaubt das Anzeigen von Inventaren anderer Spieler
+    default: op
+  cbsystem.sign:
+    description: Erlaubt das Signieren von Items
+    default: true
+  cbsystem.meta:
+    description: Erlaubt das Bearbeiten von Item-Metadaten
+    default: op
+
+  # Teleport Permissions
+  cbsystem.spawn:
+    description: Erlaubt die Teleportation zum Spawn
+    default: true
+  cbsystem.setspawn:
+    description: Erlaubt das Setzen des Spawn-Punktes
+    default: op
+  cbsystem.warp:
+    description: Erlaubt die Nutzung von Warps
+    default: true
+  cbsystem.setwarp:
+    description: Erlaubt das Erstellen von Warps
+    default: op
+  cbsystem.delwarp:
+    description: Erlaubt das Löschen von Warps
+    default: op
+  cbsystem.tpo:
+    description: Erlaubt die Teleportation zu anderen Spielern
+    default: op
+  cbsystem.tphere:
+    description: Erlaubt das Teleportieren anderer Spieler zu sich
+    default: op
+  cbsystem.tpa:
+    description: Erlaubt das Senden von Teleport-Anfragen
+    default: true
+  cbsystem.tpahere:
+    description: Erlaubt das Anfordern von Teleportationen zu sich
+    default: true
+  cbsystem.tpaccept:
+    description: Erlaubt das Akzeptieren von Teleport-Anfragen
+    default: true
+  cbsystem.tpdeny:
+    description: Erlaubt das Ablehnen von Teleport-Anfragen
+    default: true
+  cbsystem.tpatoggle:
+    description: Erlaubt das Umschalten von Teleport-Anfragen
+    default: true
+
+  # Server Permissions
+  cbsystem.broadcast:
+    description: Erlaubt das Senden von Server-Nachrichten
+    default: op
+  cbsystem.clearchat:
+    description: Erlaubt das Leeren des Chats
+    default: op
+  cbsystem.slowchat:
+    description: Erlaubt das Umschalten des Slow-Chats
+    default: op
+  cbsystem.maintenance:
+    description: Erlaubt das Umschalten des Wartungsmodus
+    default: op
+  cbsystem.reload:
+    description: Erlaubt das Neuladen des Plugins
+    default: op
+  cbsystem.restart:
+    description: Erlaubt das Neustarten des Servers
+    default: op
+
+  # Social Permissions
+  cbsystem.discord:
+    description: Erlaubt das Anzeigen des Discord-Links
+    default: true
+  cbsystem.youtube:
+    description: Erlaubt das Anzeigen des YouTube-Links
+    default: true
+  cbsystem.teamchat:
+    description: Erlaubt die Nutzung des Team-Chats
+    default: op
+  cbsystem.message:
+    description: Erlaubt das Senden privater Nachrichten
+    default: true
+  cbsystem.respond:
+    description: Erlaubt das Antworten auf private Nachrichten
+    default: true
+
+  # Info Permissions
+  cbsystem.playtime:
+    description: Erlaubt das Anzeigen der eigenen Spielzeit
+    default: true
+  cbsystem.playtime.other:
+    description: Erlaubt das Anzeigen der Spielzeit anderer Spieler
+    default: op
+
+  # Entity Permissions
+  cbsystem.spawnentity:
+    description: Erlaubt das Spawnen von Entities
+    default: op
+
+  # Bank Permissions
+  cbsystem.bank:
+    description: Erlaubt die Nutzung des Bank-Systems
+    default: true
